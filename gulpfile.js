@@ -1,4 +1,9 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
+    minifycss = require('gulp-minify-css'),
+    minifyjs = require('gulp-js-minify'),
+    concat = require('gulp-concat'),
+    autoprefixer = require('gulp-autoprefixer'),
+    rename = require("gulp-rename");
 var css = [
     'resources/assets/css/**'
 ];
@@ -23,6 +28,10 @@ var bs4 = [
 
 gulp.task('css', function () {
     return gulp.src(css)
+    .pipe(minifycss())
+    .pipe(rename(function (path) {
+        path.extname = ".min.css";
+      }))
     .pipe(gulp.dest('public/css/'));
 });
 
@@ -48,7 +57,7 @@ gulp.task('doc', function () {
 
 gulp.task('bs4', function () {
     return gulp.src(bs4)
-    .pipe(gulp.dest('public/bower/bootstrap4/'))
+    .pipe(gulp.dest('public/bower/bootstrap4/'));
 });
 
 gulp.task('default', ['css', 'font', 'js', 'img', 'doc', 'bs4']);
