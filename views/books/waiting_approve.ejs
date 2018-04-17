@@ -17,53 +17,36 @@
         <div class="row">
             <% if (books.items.data.length) { %>
                 <% books.items.data.forEach(function (book) { %>
-                    <div class="col-xs-12 col-md-4 wow fadeInLeft" data-wow-delay="0.1s" data-wow-offset="50">
-                        <div class="category-item well yellow">
-                            <div class="media">
-                                <div class="media-left">
-                                    <img onclick="window.open('/books/<%= book.id %>', '_self')" 
-                                        src="<%= book.image ? book.image.web.thumbnail_path : '/images/book_thumb_default.jpg' %>"
-                                        class="media-object img-avatar-book" 
-                                        alt="<%= book.title %>">
-                                </div>
-                                <div class="media-body">
-                                    <h5 title="<%= book.title %>" 
-                                        onclick="window.open('/books/<%= book.id %>', '_self')"
-                                        data-toggle="tooltip">
-                                        <%= book.title ? getString(book.title, configs.book.title_limit_characters) : __('No title') %>
-                                    </h5>
-                                    <h6 title="<%= book.athor %>" data-toggle="tooltip">
-                                        <%= book.author ? getString(book.title, configs.book.author_limit_characters) : 'Framgia' %>
-                                    </h6>
-                                    <input id="rating-book" name="star" class="rating" data-min="0" data-max="5" value="<%= book.avg_star %>" disabled="true" data-step="0.01" data-size="xs">
-                                    <div class="space-10"></div>
-                                    <p>
-                                        <%- book.overview %>
-                                    </p>
-                                    <a href="/books/<%= book.id %>/approve-request" class="media-button-customize"><%= __('View all request')%> (<%- book.users_waiting.length + book.users_returning.length %>)</a>
-                                </div>
-                            </div>
-                            <div class="owners">
-                                <strong> <%= __('Shared by') %>: </strong>
-                                <% if (book.owners) { %>
-                                    <% var countOwner = 0 %>
-                                    <% book.owners.forEach(function (owner) { %>
-                                        <%  countOwner++;
-                                            if (countOwner == 6) {
-                                                %> <strong> ... </strong> <%
-                                                return;
-                                            }
-                                        %>
-                                        <img onclick="window.open('/users/<%= owner.id %>')" 
-                                            onerror="imgBackUp(this)" 
-                                            data-toggle="tooltip" 
-                                            title="<%= owner.name %>" 
-                                            class="owner-image-home img-circle" 
-                                            src="<%= (owner && owner.avatar) ? owner.avatar : '/images/user_default.png' %>"
-                                            class="media-object author-photo img-thumbnail <%= owner ? '' : 'background--white' %>"
-                                            alt="<%= __('book') %>">
-                                    <% }) %>
-                                <% } %>
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-9">
+                        <div class="row event-list">
+                            <div class="event-item wow fadeInRight">
+                                <h4 class="show tip-left"><span class="">Ngay yeu cau:</span></h4>
+                                <div class="well">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img onclick="window.open('/books/<%= book.id %>', '_self')" 
+                                                src="<%= book.image ? book.image.web.thumbnail_path : '/images/book_thumb_default.jpg' %>"
+                                                class="media-object img-avatar-book" 
+                                                alt="<%= book.title %>">
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 title="<%= book.title %>" 
+                                                onclick="window.open('/books/<%= book.id %>', '_self')"
+                                                data-toggle="tooltip">
+                                                <%= book.title ? getString(book.title) : __('No title') %>
+                                            </h5>
+                                            <a href="/users/<%= user.id %>"><h4 class="media-heading"> Ten nguoi muon: <br> [Email nguoi muon]</h4></a>
+                                            <span class="label label-warning lbl-waiting<%= user.id %>"><%= __('Waiting') %></span>
+                                            <span class="text-success"><%= __('Time want to borrow') %>:</span>
+                                            <div class="space-10"></div>
+                                        </div>
+                                        <div class="media-right">
+                                            <a class="btn btn-primary btn-xs btn-approve btn-approve-waiting<%= user.id %>"><%= __('Approve') %></a>
+                                        </div>
+                                        <div class="media-right">
+                                            <a class="btn btn-danger btn-xs btn-remove btn-remove-waiting<%= user.id %>"><%= __('Remove this request') %></a>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
                     </div>
