@@ -718,14 +718,14 @@
                                                             <img src="<%= data.user_send.avatar ? data.user_send.avatar : '/images/data.user_send/icon_data.user_default.png'%>" class="media-object" alt="<%= __('Avatar') %>">
                                                         </div>
                                                         <div class="media-body">
-                                                            <a href="/books/<%= data.book.id %>/approve-request" class="notification_onclick" data-notification-id="<%= data.id %>">
+                                                            <a href="/users/<%= data.user_send.id %>">
                                                                 <h4 class="media-heading user-email-box">
                                                                     <%= data.user_send.name %>
                                                                 </h4>
-                                                                <p class="notification-p">
-                                                                    <%= __('Waiting Book') %>: <%= data.book.title %>
-                                                                </p>
                                                             </a>
+                                                            <p class="notification-p">
+                                                                <b><%= __('Waiting Book') %></b>: <%= data.book.title %>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -737,14 +737,14 @@
                                                             <img src="<%= data.user_send.avatar ? data.user_send.avatar : '/images/data.user_send/icon_data.user_default.png'%>" class="media-object" alt="<%= __('Avatar') %>">
                                                         </div>
                                                         <div class="media-body">
-                                                            <a href="#" class="notification_onclick" data-notification-id="<%= data.id %>">
+                                                            <a href="/users/<%= data.user_send.id %>">
                                                                 <h4 class="media-heading user-email-box">
                                                                     <%= data.user_send.name %>
                                                                 </h4>
-                                                                <p class="notification-p">
-                                                                    <%= __('Cancel book request') %>: <%= data.book.title %>
-                                                                </p>
                                                             </a>
+                                                            <p class="notification-p">
+                                                                <b><%= __('Cancel book request') %></b>: <%= data.book.title %>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -756,14 +756,14 @@
                                                             <img src="<%= data.user_send.avatar ? data.user_send.avatar : '/images/data.user_send/icon_data.user_default.png'%>" class="media-object" alt="<%= __('Avatar') %>">
                                                         </div>
                                                         <div class="media-body">
-                                                            <a href="/books/<%= data.book.id %>" class="notification_onclick" data-notification-id="<%= data.id %>">
+                                                            <a href="/users/<%= data.user_send.id %>">
                                                                 <h4 class="media-heading user-email-box">
                                                                     <%= data.user_send.name %>
                                                                 </h4>
-                                                                <p class="notification-p">
-                                                                    <%= __('Review Book') %>: <%= data.book.title %>
-                                                                </p>
                                                             </a>
+                                                            <p class="notification-p">
+                                                                <b><%= __('Review Book') %></b>: <%= data.book.title %>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -775,14 +775,14 @@
                                                             <img src="<%= data.user_send.avatar ? data.user_send.avatar : '/images/data.user_send/icon_data.user_default.png'%>" class="media-object" alt="<%= __('Avatar') %>">
                                                         </div>
                                                         <div class="media-body">
-                                                            <a href="/books/<%= data.book.id %>/approve-request %>" class="notification_onclick" data-notification-id="<%= data.id %>">
+                                                            <a href="/users/<%= data.user_send.id %>">
                                                                 <h4 class="media-heading user-email-box">
                                                                     <%= data.user_send.name %>
                                                                 </h4>
-                                                                <p class="notification-p">
-                                                                    <%= __('Returning book') %>: <%= data.book.title %>
-                                                                </p>
                                                             </a>
+                                                            <p class="notification-p">
+                                                                <b><%= __('Returning book') %></b>: <%= data.book.title %>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -794,14 +794,14 @@
                                                             <img src="<%= data.user_send.avatar ? data.user_send.avatar : '/images/data.user_send/icon_data.user_default.png'%>" class="media-object" alt="<%= __('Avatar') %>">
                                                         </div>
                                                         <div class="media-body">
-                                                            <a href="/books/<%= data.book.id %>" class="notification_onclick" data-notification-id="<%= data.id %>">
+                                                            <a href="/users/<%= data.user_send.id %>">
                                                                 <h4 class="media-heading user-email-box">
                                                                     <%= data.user_send.name %>
                                                                 </h4>
-                                                                <p class="notification-p">
-                                                                    <%= __('Return books successfully') %>: <%= data.book.title %>
-                                                                </p>
                                                             </a>
+                                                            <p class="notification-p">
+                                                                <b><%= __('Return books successfully') %></b>: <%= data.book.title %>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -813,14 +813,14 @@
                                                             <img src="<%= data.user_send.avatar ? data.user_send.avatar : '/images/data.user_send/icon_data.user_default.png'%>" class="media-object " alt="<%= __('Avatar') %>">
                                                         </div>
                                                         <div class="media-body">
-                                                            <a href="/books/<%= data.book.id %>" class="notification_onclick" data-notification-id="<%= data.id %>">
+                                                            <a href="/users/<%= data.user_send.id %>">
                                                                 <h4 class="media-heading user-email-box">
                                                                     <%= data.user_send.name %>
                                                                 </h4>
-                                                                <p class="notification-p">
-                                                                    <%= __('Accept your request waiting book') %>: <%= data.book.title %>
-                                                                </p>
                                                             </a>
+                                                            <p class="notification-p">
+                                                                <b><%= __('Accept your request waiting book') %></b>: <%= data.book.title %>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -832,14 +832,14 @@
                                                             <img src="<%= data.user_send.avatar ? data.user_send.avatar : '/images/data.user_send/icon_data.user_default.png'%>" class="media-object" alt="<%= __('Avatar') %>">
                                                         </div>
                                                         <div class="media-body">
-                                                            <a href="/books/<%= data.book.id %>" class="notification_onclick" data-notification-id="<%= data.id %>">
+                                                            <a href="/users/<%= data.user_send.id %>">
                                                                 <h4 class="media-heading user-email-box">
                                                                     <%= data.user_send.name %>
                                                                 </h4>
-                                                                <p class="notification-p">
-                                                                    <%= data.user_send.name %> <%= __('Add book') %>: <%= data.book.title %>
-                                                                </p>
                                                             </a>
+                                                            <p class="notification-p">
+                                                                <b><%= __('Add book') %></b>: <%= data.book.title %>
+                                                            </p>  
                                                         </div>
                                                     </div>
                                                 </div>
@@ -851,14 +851,14 @@
                                                             <img src="<%= data.user_send.avatar ? data.user_send.avatar : '/images/data.user_send/icon_data.user_default.png'%>" class="media-object" alt="<%= __('Avatar') %>">
                                                         </div>
                                                         <div class="media-body">
-                                                            <a href="/books/<%= data.book.id %>" class="notification_onclick" data-notification-id="<%= data.id %>">
+                                                            <a href="/users/<%= data.user_send.id %>">
                                                                 <h4 class="media-heading user-email-box">
                                                                     <%= data.user_send.name %>
                                                                 </h4>
-                                                                <p class="notification-p">
-                                                                    <%= data.user_send.name %> <%= __('Remove Book') %>: <%= data.book.title %>
-                                                                </p>
                                                             </a>
+                                                            <p class="notification-p">
+                                                                <b><%= __('Remove Book') %></b>: <%= data.book.title %>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
